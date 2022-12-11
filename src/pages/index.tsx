@@ -1,10 +1,10 @@
 import MovieButton from "common/components/atoms/Button";
+import LandingPageView from "modules/landing/LandingPageView";
 
 const Home = () => {
   return (
     <>
-      <MovieButton primary>Hola</MovieButton>
-      <MovieButton>Hola</MovieButton>
+      <LandingPageView />
     </>
   );
 };

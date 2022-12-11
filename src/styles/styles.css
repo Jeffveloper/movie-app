@@ -1,3 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-r from-blue-400 to-orange-500 via-purple-500 animate-gradient-x font-poppins text-white scroll-smooth;
+  }
+
+  #__next {
+    @apply xs:h-screen xs:flex xs:items-center xs:justify-center xs:py-5;
+  }
+}
+
+@media (min-width: 380px) {
+  .scrollbar::-webkit-scrollbar {
+    @apply w-3 h-3;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    @apply rounded-full bg-gray-500/10;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-gray-800;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-700;
+  }
+
+  .user-profile__img {
+    @apply rounded-full;
+  }
+}

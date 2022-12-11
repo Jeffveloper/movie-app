@@ -16,10 +16,13 @@
     "incremental": true,
     "baseUrl": "src",
     "paths": {
+      "@modules/*": ["modules/*"],
+      "@components/*": ["common/components/*"],
       "@constants/*": ["common/constants/*"],
       "@contexts/*": ["common/contexts/*"],
       "@helpers/*": ["common/helpers/*"],
       "@hooks/*": ["common/hooks/*"],
+      "@interfaces/*": ["common/interfaces/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -14,23 +14,31 @@ export interface MovieItem {
   episode_count: number;
   rating: number;
   vote_count: number;
-  genres: {
-    id: number;
-    display_name: string;
-  };
-  seasons: {
-    id: number;
-    number: number;
-    episode_count: number;
-  };
-  credits: {
-    id: number;
-    name: string;
-    poster: string;
-    pivot: {
-      job: string;
-      department: string;
-      character: string;
-    };
-  };
+  genres: movieGenre[];
+  seasons: movieSeason[];
+  credits: movieCredit[];
 }
+
+type movieGenre = {
+  id: number;
+  display_name: string;
+};
+
+type movieSeason = {
+  id: number;
+  number: number;
+  episode_count: number;
+};
+
+type movieCredit = {
+  id: number;
+  name: string;
+  poster: string;
+  pivot: creditPivot[];
+};
+
+type creditPivot = {
+  job: string;
+  department?: string | undefined;
+  character?: string | undefined;
+};

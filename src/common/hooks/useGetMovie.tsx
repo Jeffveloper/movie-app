@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 const baseUrl = process.env.NEXT_PUBLIC_MOVIES_API;
 const token = process.env.NEXT_PUBLIC_MOVIES_API_TOKEN;
 
-const useGetMovie = async (id: number): Promise<MovieItem[]> => {
-  const [movieData, setMovieData] = useState<MovieItem[]>([]);
+const useGetMovie = async (id: number): Promise<MovieItem> => {
+  const [movieData, setMovieData] = useState<MovieItem>({} as MovieItem);
 
   const getMovie = async () => {
     const petition = await fetch(`${baseUrl}/titles/${id}`, {
@@ -16,47 +16,28 @@ const useGetMovie = async (id: number): Promise<MovieItem[]> => {
       },
     });
     const response = await petition.json();
-    const aItems = response.data.title.map((item: MovieItem) => {
-      const obj: MovieItem = {
-        id: item.id,
-        name: item.name,
-        year: item.year,
-        poster: item.poster,
-        season_count: item.season_count,
-        language: item.language,
-        episode_count: item.episode_count,
-        rating: item.rating,
-        vote_count: item.vote_count,
-        genres: {
-          id: item.genres.id,
-          display_name: item.genres.display_name,
-        },
-        seasons: {
-          id: item.seasons.id,
-          number: item.seasons.number,
-          episode_count: item.seasons.episode_count,
-        },
-        credits: {
-          id: item.credits.id,
-          name: item.credits.name,
-          poster: item.credits.poster,
-          pivot: {
-            job: item.credits.pivot.job,
-            department: item.credits.pivot.department,
-            character: item.credits.pivot.character,
-          },
-        },
-      };
-      return obj;
-    });
-    setMovieData(aItems);
+    const aItem: MovieItem = {
+      id: response.title.id,
+      name: response.title.name,
+      year: response.title.year,
+      poster: response.title.poster,
+      season_count: response.title.season_count,
+      language: response.title.language,
+      episode_count: response.title.episode_count,
+      rating: response.title.rating,
+      vote_count: response.title.vote_count,
+      genres: response.title.genres,
+      seasons: response.title.seasons,
+      credits: response.title.credits,
+    };
+    setMovieData(aItem);
   };
 
   useEffect(() => {
     getMovie();
   }, []);
 
-  return movieData;
+  return movieData!;
 };
 
 export default useGetMovie;

@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'body-bg': '#0a0e18',
+      },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
       },

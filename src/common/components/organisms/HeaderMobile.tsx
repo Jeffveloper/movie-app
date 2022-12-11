@@ -1,6 +1,6 @@
 const HeaderMobile = () => {
   return (
-    <div className="sticky top-0 w-full backdrop-blur-sm bg-white/5">
+    <div className="bottom-0 fixed xs:absolute z-10 w-full backdrop-blur-sm bg-black/70">
       <ul className="list-none py-4 px-8 flex gap-2 justify-between">
         <li>
           <svg

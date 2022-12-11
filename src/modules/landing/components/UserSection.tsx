@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const UserSection = (): JSX.Element => {
   return (
-    <div className="flex justify-between mb-9">
+    <section className="flex justify-between mb-9 px-8">
       <div className="">
         <h2 className="text-2xl leading-9">
           Hi <span className="font-extrabold">Markus</span>
@@ -19,7 +19,7 @@ const UserSection = (): JSX.Element => {
         width="53"
         height="53"
       />
-    </div>
+    </section>
   );
 };
 

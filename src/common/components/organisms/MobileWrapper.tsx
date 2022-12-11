@@ -1,7 +1,10 @@
+import HeaderMobile from "@components/organisms/HeaderMobile";
+
 const MobileWrapper = ({ children }: MobileWrapperProps) => {
   return (
-    <div className="xs:overflow-hidden xs:rounded-md xs:shadow-2xl xs:max-h-full">
-      <div className="xs:w-[380px] xs:m-auto xs:h-[700px] bg-gray-900 overflow-y-auto overflow-x-hidden relative scrollbar">
+    <div className="xs:overflow-hidden xs:rounded-md xs:shadow-2xl xs:max-h-full relative">
+      <HeaderMobile />
+      <div className="xs:w-[380px] xs:m-auto xs:h-[700px] bg-body-bg overflow-y-auto overflow-x-hidden relative scrollbar">
         {children}
       </div>
     </div>

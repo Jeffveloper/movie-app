@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-gradient-to-r from-blue-400 to-orange-500 via-purple-500 animate-gradient-x font-poppins text-white scroll-smooth;
+    @apply bg-gradient-to-tl from-violet-500 to-orange-500 via-green-500 animate-gradient-y font-poppins text-white scroll-smooth;
   }
 
   #__next {

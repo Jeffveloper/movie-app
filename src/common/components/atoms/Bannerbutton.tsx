@@ -1,11 +1,19 @@
+import { MovieContext } from "@contexts/MovieContext";
 import classNames from "classnames";
 import Link from "next/link";
-import { exitCode } from "process";
-import { displayPartsToString } from "typescript";
+import { useRouter } from "next/router";
+import { useContext } from "react";
 
 const BannerButton = ({ text, icon, primary }: BannerButtonProps) => {
+  const router = useRouter();
+  const { movieData } = useContext(MovieContext);
+
   return (
-    <Link href="/movie/1">
+    <Link
+      href={
+        router.pathname === "/" ? "/movie/565431" : `/movie/${movieData.id}`
+      }
+    >
       <button
         className={classNames(
           { "bg-white text-black px-5 rounded": primary },

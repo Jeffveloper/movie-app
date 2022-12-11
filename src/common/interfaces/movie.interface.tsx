@@ -8,6 +8,7 @@ export interface MovieItem {
   id: number;
   name: string;
   year: number;
+  description: string;
   poster: string;
   season_count: number;
   language: string;
@@ -30,11 +31,11 @@ type movieSeason = {
   episode_count: number;
 };
 
-type movieCredit = {
+export type movieCredit = {
   id: number;
   name: string;
   poster: string;
-  pivot: creditPivot[];
+  pivot: creditPivot;
 };
 
 type creditPivot = {

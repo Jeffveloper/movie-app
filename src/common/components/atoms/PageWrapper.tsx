@@ -1,7 +1,5 @@
 const PageWrapper = ({ children }: PageWrapperProps) => {
-  return (
-    <div className="relative min-h-screen xs:min-h-fit pb-20">{children}</div>
-  );
+  return <div className="relative min-h-screen xs:min-h-fit">{children}</div>;
 };
 
 type PageWrapperProps = {

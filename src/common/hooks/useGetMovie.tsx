@@ -20,6 +20,7 @@ const useGetMovie = async (id: number): Promise<MovieItem> => {
       id: response.title.id,
       name: response.title.name,
       year: response.title.year,
+      description: response.title.description,
       poster: response.title.poster,
       season_count: response.title.season_count,
       language: response.title.language,

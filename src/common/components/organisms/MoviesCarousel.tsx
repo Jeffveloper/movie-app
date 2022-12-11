@@ -2,17 +2,17 @@ import MoviesCarouselItem from "@components/atoms/MovieCarouselItem";
 import CarouselSkeleton from "@components/molecules/MovieCarouselskeletons";
 import toTitleCase from "@helpers/titleCase.helper";
 import useGetMovies from "@hooks/useGetMoviesList";
-import { MovieItem } from "@interfaces/movie.interface";
+import { MoviesItem } from "@interfaces/movie.interface";
 import classNames from "classnames";
 import { useState } from "react";
 
 const MoviesCarousel = ({ genre, alternative }: carouselProps): JSX.Element => {
-  const [movieData, setMovieData] = useState<MovieItem[]>([]);
-  const data: Promise<void | MovieItem[]> = useGetMovies(genre).then((data) =>
-    setMovieData(data)
+  const [moviesData, setMoviesData] = useState<MoviesItem[]>([]);
+  const data: Promise<void | MoviesItem[]> = useGetMovies(genre).then((data) =>
+    setMoviesData(data)
   );
 
-  if (movieData.length === 0) return <CarouselSkeleton />;
+  if (moviesData.length === 0) return <CarouselSkeleton />;
 
   return (
     <section
@@ -21,7 +21,7 @@ const MoviesCarousel = ({ genre, alternative }: carouselProps): JSX.Element => {
       <h2 className="mb-4">{toTitleCase(genre)}</h2>
       <div className="overflow-auto snap-x scrollbar pb-1">
         <ul className="flex gap-2 w-max">
-          {movieData.map((movie: MovieItem) => (
+          {moviesData.map((movie: MoviesItem) => (
             <MoviesCarouselItem movie={movie} key={movie.id} />
           ))}
         </ul>

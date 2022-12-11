@@ -1,4 +1,4 @@
-import { MovieItem } from "@interfaces/movie.interface";
+import { MoviesItem } from "@interfaces/movie.interface";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ const MoviesCarouselItem = ({ movie }: CarouselItemProps) => {
 };
 
 type CarouselItemProps = {
-  movie: MovieItem;
+  movie: MoviesItem;
 };
 
 export default MoviesCarouselItem;

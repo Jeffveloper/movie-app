@@ -1,12 +1,14 @@
 import PageWrapper from "@components/atoms/PageWrapper";
+import MovieBanner from "@components/organisms/MovieBannerSection";
 import MoviesCarousel from "@components/organisms/MoviesCarousel";
-import LandingSearchbutton from "./components/LandingSearchButton";
-import UserSection from "./components/UserSection";
+import UserSection from "@modules/landing/components/UserSection";
+import LandingSearchbutton from "@modules/landing/components/LandingSearchButton";
 
 const LandingPageView = (): JSX.Element => {
   return (
     <PageWrapper>
       <main>
+        <MovieBanner movieId={565431} />
         <UserSection />
         <LandingSearchbutton />
         <div className="flex flex-col gap-10">

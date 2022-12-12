@@ -9,7 +9,7 @@ const MovieCast = () => {
   return (
     <section className="px-8 py-6 ">
       <h2 className="text-lg mb-4 font-semibold">Cast</h2>
-      <ul className="flex gap-3 overflow-auto scrollbar snap-x ">
+      <ul className="flex gap-3 overflow-auto scrollbar snap-x pb-2">
         {movieData.credits.map((cast: movieCredit) => (
           <MovieCastItem cast={cast} key={cast.id} />
         ))}

@@ -19,8 +19,8 @@ const MoviesCarousel = ({ genre, alternative }: carouselProps): JSX.Element => {
       className={classNames({ "bg-gray-900": alternative }, "px-8 py-6")}
     >
       <h2 className="mb-4">{toTitleCase(genre)}</h2>
-      <div className="overflow-auto snap-x scrollbar pb-1">
-        <ul className="flex gap-2 w-max">
+      <div className="overflow-auto snap-x scrollbar pb-3">
+        <ul className="flex gap-3 w-max">
           {moviesData.map((movie: MoviesItem) => (
             <MoviesCarouselItem movie={movie} key={movie.id} />
           ))}

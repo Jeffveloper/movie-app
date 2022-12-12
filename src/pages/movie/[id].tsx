@@ -1,12 +1,7 @@
-import { MovieProvider } from "@contexts/MovieContext";
 import MoviePageView from "@modules/movie/MoviePageView";
 
 const SingleMovie = () => {
-  return (
-    <MovieProvider>
-      <MoviePageView />
-    </MovieProvider>
-  );
+  return <MoviePageView />;
 };
 
 export default SingleMovie;

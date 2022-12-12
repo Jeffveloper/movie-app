@@ -14,7 +14,7 @@ const MoviePageView = () => {
   const id: number = GetCurrentId();
   const { movieData, setMovieData } = useContext(MovieContext);
 
-  const data: Promise<void | MovieItem> = useGetMovie(id).then((data) => {
+  useGetMovie(id).then((data) => {
     setMovieData(data);
   });
 
@@ -22,7 +22,7 @@ const MoviePageView = () => {
 
   return (
     <main className="relative">
-      <MovieBanner movieId={movieData.id} />
+      <MovieBanner />
       <MovieDescription title={movieData.name} text={movieData.description} />
       <MovieGenres />
       <MovieCast />

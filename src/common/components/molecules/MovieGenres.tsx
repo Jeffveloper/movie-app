@@ -7,10 +7,10 @@ const MovieGenres = () => {
   return (
     <section className="px-8 py-6 ">
       <h2 className="text-lg mb-4 font-semibold">Genres</h2>
-      <ul className="flex gap-3">
+      <ul className="flex gap-3 flex-wrap">
         {movieData.genres.map((genre) => (
-          <li key={genre.id} className="flex">
-            <p className="text-sm leading-6 bg-gray-900 text-gray-200 inline-block py-2 px-4 rounded-md">
+          <li key={genre.id} className="flex items-center flex-wrap">
+            <p className="text-sm leading-6 bg-gray-900 text-gray-200 inline-block py-2 px-4 rounded-md w-max">
               {genre.display_name}
             </p>
           </li>

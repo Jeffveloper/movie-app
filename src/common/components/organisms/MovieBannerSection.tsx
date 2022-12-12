@@ -1,23 +1,19 @@
 import BannerMovieSkeleton from "@components/molecules/BannerMovieSkeleton";
 import MovieBannerButtons from "@components/molecules/MovieBannerButtons";
 import MovieBannerStats from "@components/molecules/MovieBannerStats";
-import useGetMovie from "@hooks/useGetMovie";
-import { MovieItem } from "@interfaces/movie.interface";
+import { MovieContext } from "@contexts/MovieContext";
 import Image from "next/image";
-import { useState } from "react";
+import { useContext } from "react";
 
-const MovieBanner = ({ movieId }: MovieBannerProps) => {
-  const [movieData, setMovieData] = useState<MovieItem>({} as MovieItem);
-  const data: Promise<void | MovieItem> = useGetMovie(movieId).then((data) =>
-    setMovieData(data)
-  );
+const MovieBanner = () => {
+  const { movieData } = useContext(MovieContext);
   if (Object.keys(movieData).length === 0) return <BannerMovieSkeleton />;
 
   return (
     <section>
       <div
         className="relative top-0 w-full h-full 
-        before:content-[''] before:absolute before:bottom-0 before:w-full before:h-1/6 before:block before:bg-gradient-to-t before:from-body-bg"
+        before:content-[''] before:absolute before:bottom-0 before:w-full before:h-1/5 before:block before:bg-gradient-to-t before:from-body-bg"
       >
         <Image
           src={movieData.poster}
@@ -30,10 +26,6 @@ const MovieBanner = ({ movieId }: MovieBannerProps) => {
       <MovieBannerStats movieData={movieData} />
     </section>
   );
-};
-
-type MovieBannerProps = {
-  movieId: number;
 };
 
 export default MovieBanner;

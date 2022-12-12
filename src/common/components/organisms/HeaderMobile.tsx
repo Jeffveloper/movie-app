@@ -1,7 +1,7 @@
-import { AiOutlineHome } from "react-icons/Ai";
-import { FaRandom } from "react-icons/Fa";
-import { BiSearchAlt2 } from "react-icons/Bi";
-import { FiUser } from "react-icons/Fi";
+import { AiOutlineHome } from "react-icons/ai";
+import { FaRandom } from "react-icons/fa";
+import { BiSearchAlt2 } from "react-icons/bi";
+import { FiUser } from "react-icons/fi";
 import Link from "next/link";
 
 const HeaderMobile = () => {

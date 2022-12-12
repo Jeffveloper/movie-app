@@ -1,7 +1,6 @@
 import BannerButton from "@components/atoms/Bannerbutton";
-import { FaPlay } from "react-icons/Fa";
-import { AiOutlinePlus } from "react-icons/Ai";
-import { AiOutlineInfoCircle } from "react-icons/Ai";
+import { FaPlay } from "react-icons/fa";
+import { AiOutlinePlus, AiOutlineInfoCircle } from "react-icons/ai";
 
 const MovieBannerButtons = () => {
   return (

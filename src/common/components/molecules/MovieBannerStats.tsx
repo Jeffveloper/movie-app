@@ -1,7 +1,7 @@
 import { MovieItem } from "@interfaces/movie.interface";
 import { Rating } from "react-simple-star-rating";
-import { AiTwotoneCalendar } from "react-icons/Ai";
-import { FaHeart } from "react-icons/Fa";
+import { AiTwotoneCalendar } from "react-icons/ai";
+import { FaHeart } from "react-icons/fa";
 
 const MovieBannerStats = ({ movieData }: BannerStatsProps) => {
   return (

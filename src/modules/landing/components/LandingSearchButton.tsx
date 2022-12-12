@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BiSearchAlt2 } from "react-icons/Bi";
+import { BiSearchAlt2 } from "react-icons/bi";
 
 const LandingSearchbutton = (): JSX.Element => {
   return (

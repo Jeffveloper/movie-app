@@ -1,6 +1,6 @@
 import { SearchContext } from "@contexts/SearchMovieContext";
 import { useContext } from "react";
-import { BiSearchAlt2 } from "react-icons/Bi";
+import { BiSearchAlt2 } from "react-icons/bi";
 
 const SearchButtonSection = () => {
   const { setSearch } = useContext(SearchContext);

@@ -1,6 +1,6 @@
 import { movieCredit } from "@interfaces/movie.interface";
 import Image from "next/image";
-import { FaUserCircle } from "react-icons/Fa";
+import { FaUserCircle } from "react-icons/fa";
 
 const MovieCastItem = ({ cast, itemKey }: CastItemProps) => {
   return (

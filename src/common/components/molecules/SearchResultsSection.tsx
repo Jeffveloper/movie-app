@@ -5,7 +5,7 @@ import SearchItem from "@modules/search/components/SearchItem";
 import SearchResultsSkeleton from "@modules/search/components/searchResultsSkeleton";
 import classNames from "classnames";
 import { useContext } from "react";
-import { TbFaceIdError } from "react-icons/Tb";
+import { TbFaceIdError } from "react-icons/tb";
 
 const SearchResultsSection = () => {
   const { search, movieList, loading } = useContext(SearchContext);

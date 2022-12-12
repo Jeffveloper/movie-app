@@ -1,7 +1,7 @@
 import { MovieItem } from "@interfaces/movie.interface";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { BsCheckLg } from "react-icons/Bs";
+import { BsCheckLg } from "react-icons/bs";
 
 const baseUrl = process.env.NEXT_PUBLIC_MOVIES_API;
 const token = process.env.NEXT_PUBLIC_MOVIES_API_TOKEN;

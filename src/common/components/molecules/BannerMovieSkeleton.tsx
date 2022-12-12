@@ -1,5 +1,4 @@
-import { AiOutlinePlus } from "react-icons/Ai";
-import { AiOutlineInfoCircle } from "react-icons/Ai";
+import { AiOutlinePlus, AiOutlineInfoCircle } from "react-icons/ai";
 
 const BannerMovieSkeleton = () => {
   return (

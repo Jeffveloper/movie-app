@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BsArrowLeftCircleFill } from "react-icons/Bs";
+import { BsArrowLeftCircleFill } from "react-icons/bs";
 
 const ReturnButton = () => {
   return (

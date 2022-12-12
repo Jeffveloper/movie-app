@@ -12,11 +12,11 @@ const MovieBanner = () => {
   return (
     <section>
       <div
-        className="relative top-0 w-full h-full 
+        className="relative top-0 w-[368px] h-[552px] 
         before:content-[''] before:absolute before:bottom-0 before:w-full before:h-1/5 before:block before:bg-gradient-to-t before:from-body-bg"
       >
         <Image
-          className="w-auto h-auto"
+          className="w-auto h-full"
           src={movieData.poster}
           alt={movieData.name}
           width={415}

@@ -2,9 +2,9 @@ import { movieCredit } from "@interfaces/movie.interface";
 import Image from "next/image";
 import { FaUserCircle } from "react-icons/Fa";
 
-const MovieCastItem = ({ cast }: CastItemProps) => {
+const MovieCastItem = ({ cast, itemKey }: CastItemProps) => {
   return (
-    <li className="flex flex-col gap-2 text-center snap-center">
+    <li key={itemKey} className="flex flex-col gap-2 text-center snap-center">
       <div className="w-16 h-16 mx-5 border rounded-full shadow-xl overflow-hidden flex justify-center items-center">
         {cast.poster === null && <FaUserCircle size={80} />}
         {cast.poster !== null && (
@@ -33,6 +33,7 @@ const MovieCastItem = ({ cast }: CastItemProps) => {
 
 type CastItemProps = {
   cast: movieCredit;
+  itemKey: number;
 };
 
 export default MovieCastItem;

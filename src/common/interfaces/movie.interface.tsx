@@ -43,3 +43,11 @@ type creditPivot = {
   department?: string | undefined;
   character?: string | undefined;
 };
+
+export interface movieSearch {
+  id: number;
+  name: string;
+  poster: string;
+  description: string;
+  rating: number;
+}

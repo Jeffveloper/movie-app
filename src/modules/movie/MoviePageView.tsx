@@ -1,4 +1,5 @@
 import ReturnButton from "@components/atoms/ReturnButton";
+import BannerMovieSkeleton from "@components/molecules/BannerMovieSkeleton";
 import MovieCast from "@components/molecules/MovieCast";
 import MovieDescription from "@components/molecules/MovieDescription";
 import MovieGenres from "@components/molecules/MovieGenres";
@@ -7,7 +8,6 @@ import MoviesCarousel from "@components/organisms/MoviesCarousel";
 import { MovieContext } from "@contexts/MovieContext";
 import GetCurrentId from "@helpers/GetCurrentId";
 import useGetMovie from "@hooks/useGetMovie";
-import { MovieItem } from "@interfaces/movie.interface";
 import { useContext } from "react";
 
 const MoviePageView = () => {
@@ -18,7 +18,7 @@ const MoviePageView = () => {
     setMovieData(data);
   });
 
-  if (Object.keys(movieData).length === 0) return <p>Getting Data ...</p>;
+  if (Object.keys(movieData).length === 0) return <BannerMovieSkeleton />;
 
   return (
     <main className="relative">
@@ -26,7 +26,9 @@ const MoviePageView = () => {
       <MovieDescription title={movieData.name} text={movieData.description} />
       <MovieGenres />
       <MovieCast />
-      <MoviesCarousel genre={movieData.genres[0].display_name} alternative />
+      {movieData.genres.length > 0 && (
+        <MoviesCarousel genre={movieData.genres[0].display_name} alternative />
+      )}
       <ReturnButton />
     </main>
   );

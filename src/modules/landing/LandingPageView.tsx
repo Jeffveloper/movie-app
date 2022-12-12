@@ -1,12 +1,11 @@
 import PageWrapper from "@components/atoms/PageWrapper";
 import MovieBanner from "@components/organisms/MovieBannerSection";
 import MoviesCarousel from "@components/organisms/MoviesCarousel";
-import UserSection from "@modules/landing/components/UserSection";
-import LandingSearchbutton from "@modules/landing/components/LandingSearchButton";
-import { useContext } from "react";
 import { MovieContext } from "@contexts/MovieContext";
-import { MovieItem } from "@interfaces/movie.interface";
 import useGetMovie from "@hooks/useGetMovie";
+import LandingSearchbutton from "@modules/landing/components/LandingSearchButton";
+import UserSection from "@modules/landing/components/UserSection";
+import { useContext } from "react";
 
 const LandingPageView = (): JSX.Element => {
   const { movieData, setMovieData } = useContext(MovieContext);

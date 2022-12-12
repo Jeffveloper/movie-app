@@ -9,6 +9,7 @@ const MovieCastItem = ({ cast }: CastItemProps) => {
         {cast.poster === null && <FaUserCircle size={80} />}
         {cast.poster !== null && (
           <Image
+            className="w-auto h-auto"
             src={cast.poster}
             alt={cast.name}
             width={300}

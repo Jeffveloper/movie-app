@@ -7,11 +7,12 @@ const MoviesCarouselItem = ({ movie }: CarouselItemProps) => {
     <li className="snap-center">
       <Link href={`/movie/${movie.id}`}>
         <Image
-          className="rounded"
+          className="rounded w-auto h-auto"
           src={movie.poster}
           alt={movie.name}
           width={100}
           height={150}
+          priority
         />
       </Link>
     </li>

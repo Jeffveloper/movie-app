@@ -13,11 +13,12 @@ const UserSection = (): JSX.Element => {
         </p>
       </div>
       <Image
-        className="rounded-full"
+        className="rounded-full w-auto h-auto"
         src="/images/user-profile-photo.jpg"
         alt="profile photo"
         width="53"
         height="53"
+        priority
       />
     </section>
   );

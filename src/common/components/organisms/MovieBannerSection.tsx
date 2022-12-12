@@ -16,10 +16,12 @@ const MovieBanner = () => {
         before:content-[''] before:absolute before:bottom-0 before:w-full before:h-1/5 before:block before:bg-gradient-to-t before:from-body-bg"
       >
         <Image
+          className="w-auto h-auto"
           src={movieData.poster}
           alt={movieData.name}
           width={415}
           height={620}
+          priority
         />
       </div>
       <MovieBannerButtons />
